@@ -1,9 +1,9 @@
-package org.sdet5.TwoPointer;
+package org.sdet5.twoPointer;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LC11_Container_With_Most_Water {
+public class LC011_Container_With_Most_Water {
     /*
         1. https://leetcode.com/problems/container-with-most-water/description/
      */
