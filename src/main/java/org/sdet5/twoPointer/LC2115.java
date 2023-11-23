@@ -10,9 +10,9 @@ public class LC2115 {
 
     @Test
     public void testDifferenceOfTwoArray() {
-        int[] nums1 = {1,2,2,6,3,7,9}; //1,2,2,3,6,7,9
-        int[] nums2 = {1,2,4,6};
-     //   List<List<Integer>> diffTwoArray = findDiffTwoArray(nums1, nums2);
+        int[] nums1 = {1, 2, 2, 6, 3, 7, 9}; //1,2,2,3,6,7,9
+        int[] nums2 = {1, 2, 4, 6};
+        //   List<List<Integer>> diffTwoArray = findDiffTwoArray(nums1, nums2);
         List<List<Integer>> diffTwoArray = findDiffTwoArrayTP(nums1, nums2);
 
         System.out.println(diffTwoArray);
@@ -76,33 +76,32 @@ public class LC2115 {
         return the List<List<Integer>>
     */
 
-    public  List<List<Integer>>  findDiffTwoArrayTP(int[] nums1, int[] nums2) {
+    public List<List<Integer>> findDiffTwoArrayTP(int[] nums1, int[] nums2) {
         int left = 0, right = 0;
         List<List<Integer>> output = new ArrayList<>();
         List<Integer> unique1 = new ArrayList<>();
         List<Integer> unique2 = new ArrayList<>();
         Arrays.sort(nums1);
         Arrays.sort(nums2);
-        while (left < nums1.length && right < nums2.length)
-        {
-            if(nums1[left]< nums2[right]){
-                if(unique1.isEmpty() || unique1.get(unique1.size()-1)!=nums1[left]){
+        while (left < nums1.length && right < nums2.length) {
+            if (nums1[left] < nums2[right]) {
+                if (unique1.isEmpty() || unique1.get(unique1.size() - 1) != nums1[left]) {
                     unique1.add(nums1[left]);
                 }
                 left++;
-            } else if (nums1[left]> nums2[right]) {
-                if(unique2.isEmpty() || unique2.get(unique2.size()-1)!=nums2[right]){
+            } else if (nums1[left] > nums2[right]) {
+                if (unique2.isEmpty() || unique2.get(unique2.size() - 1) != nums2[right]) {
                     unique2.add(nums2[right]);
                 }
                 right++;
-            }else{
+            } else {
                 left++;
                 right++;
             }
         }
 
         while (left < nums1.length) {
-            if (unique1.isEmpty()||unique1.get(unique1.size()-1)!=nums1[left]) {
+            if (unique1.isEmpty() || unique1.get(unique1.size() - 1) != nums1[left]) {
                 unique1.add(nums1[left]);
             }
             left++;
@@ -110,7 +109,7 @@ public class LC2115 {
 
 
         while (right < nums2.length) {
-            if (unique2.isEmpty()||unique2.get(unique2.size()-1)!=nums2[right]) {
+            if (unique2.isEmpty() || unique2.get(unique2.size() - 1) != nums2[right]) {
                 unique2.add(nums2[right]);
             }
             right++;
