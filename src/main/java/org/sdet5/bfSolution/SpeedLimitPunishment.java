@@ -1,4 +1,5 @@
 package org.sdet5.bfSolution;
+
 import java.util.Scanner;
 
 public class SpeedLimitPunishment {
@@ -8,7 +9,7 @@ public class SpeedLimitPunishment {
         int fine = calculateFine(speed);
         String punishment = calculatePunishment(speed);
         System.out.println(fine + " " + punishment);
-       // scanner.close();
+        // scanner.close();
     }
 
     // Function to calculate fine based on speed
@@ -21,6 +22,7 @@ public class SpeedLimitPunishment {
             return 25000;
         }
     }
+
     private static String calculatePunishment(int speed) {
         if (speed <= 90) {
             return "No punishment";

@@ -9,13 +9,14 @@ public class BinarySearch {
         int ans = binarySearch(arr, target);
         System.out.println(ans);
     }
+
     //Time complexity - O(N Log N ) // best case - O(1)
     //Space Complexity - O(1)
     static int binarySearch(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
         Arrays.sort(arr);
-        while(start <= end) {
+        while (start <= end) {
             int mid = start + (end - start) / 2;
             if (target < arr[mid]) {
                 end = mid - 1;

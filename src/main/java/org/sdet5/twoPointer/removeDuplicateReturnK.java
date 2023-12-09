@@ -7,8 +7,8 @@ import java.util.Arrays;
 public class removeDuplicateReturnK {
 
     @Test
-    public void testRemoveDuplicate(){
-        int[] num ={1,1,1,2,2,3,4,5,5};
+    public void testRemoveDuplicate() {
+        int[] num = {1, 1, 1, 2, 2, 3, 4, 5, 5};
         removeDuplicateVal(num);
 
     }
@@ -31,13 +31,13 @@ public class removeDuplicateReturnK {
     //Time - O(N)
     //Space - O(1)
     private void removeDuplicateVal(int[] num) {
-        int  j = 1;
+        int j = 1;
         for (int i = 1; i < num.length; i++) {
-            if(num[i]!=num[i-1]){
-                num[j++]=num[i];
+            if (num[i] != num[i - 1]) {
+                num[j++] = num[i];
             }
         }
         System.out.println(Arrays.toString(num));
-        System.out.println("unique count" +j);
+        System.out.println("unique count" + j);
     }
 }

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class PalindromString {
 
     @Test
-    public void testPalindromeString(){
+    public void testPalindromeString() {
         String word = "level ";
         System.out.println(isPalindrome(word));
     }
@@ -15,8 +15,8 @@ public class PalindromString {
     private boolean isPalindrome(String word) {
         word = word.toLowerCase();
         int left = 0;
-        int right = word.length()-1;
-        while (left<right){
+        int right = word.length() - 1;
+        while (left < right) {
             if (word.charAt(left) != word.charAt(right)) {
                 return false;
             }

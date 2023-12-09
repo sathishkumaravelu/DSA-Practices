@@ -13,7 +13,7 @@ public class LC884 {
         String s1 = "apple apple";
         String s2 = "wonderful";
         //uncommonFromSentencesTP(s1, s2);
-        uncommonFromSentencesSet(s1,s2);
+        uncommonFromSentencesSet(s1, s2);
     }
 
 
@@ -118,16 +118,16 @@ public class LC884 {
         System.out.println(list);
     }
 
-    private void uncommonFromSentencesSet(String s1, String s2){
+    private void uncommonFromSentencesSet(String s1, String s2) {
 
-        s1 +=" "+s2;
+        s1 += " " + s2;
         String[] s = s1.split(" ");
         HashSet<String> set = new HashSet<>();
 
-        for (String word:s) {
-            if (set.isEmpty()||!set.contains(word)){
+        for (String word : s) {
+            if (set.isEmpty() || !set.contains(word)) {
                 set.add(word);
-            }else{
+            } else {
                 set.remove(word);
             }
         }

@@ -2,7 +2,6 @@ package org.sdet5.hashing;
 
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -28,7 +27,7 @@ public class CountCharacter {
             frequencyMap.put(Character.toLowerCase(c), frequencyMap.getOrDefault(Character.toLowerCase(c), 0) + 1);
         }
         for (Map.Entry<Character, Integer> setVal : frequencyMap.entrySet()) {
-            System.out.print(setVal.getKey() + ": " + setVal.getValue()+" ");
+            System.out.print(setVal.getKey() + ": " + setVal.getValue() + " ");
         }
         System.out.println();
     }
@@ -48,7 +47,7 @@ public class CountCharacter {
         // Print the character frequencies
         for (int i = 0; i < frequencyArray.length; i++) {
             if (frequencyArray[i] > 0) {
-                System.out.print((char) i + ": " + frequencyArray[i]+ " ");
+                System.out.print((char) i + ": " + frequencyArray[i] + " ");
             }
         }
         System.out.println();

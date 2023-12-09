@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class LC1662 {
 
     @Test
-    public void testArrayStringsAreEqual(){
+    public void testArrayStringsAreEqual() {
         String[] word1 = {"a", "cb"};
         String[] word2 = {"ab", "cb"};
         boolean b = arrayStringsAreEqual(word1, word2);
@@ -23,9 +23,10 @@ public class LC1662 {
     private boolean arrayStringsAreEqual(String[] word1, String[] word2) {
         return (formString(word1).equals(formString(word2)));
     }
-    private String formString(String[] word){
+
+    private String formString(String[] word) {
         StringBuilder temp = new StringBuilder();
-        for (String s: word) {
+        for (String s : word) {
             temp.append(s);
         }
         return temp.toString();

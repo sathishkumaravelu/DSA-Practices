@@ -16,8 +16,8 @@ public class LC2656 {
 
 
     @Test
-    public void testMaximumSum(){
-        int[] nums ={1,2,3,4,5};
+    public void testMaximumSum() {
+        int[] nums = {1, 2, 3, 4, 5};
         int k = 3;
         int result = maximizeSum(nums, k);
         System.out.println(result);
@@ -26,12 +26,12 @@ public class LC2656 {
 
     //TimeComplexity - O(N Log N)
     //Space complexity - O(1)
-    private int maximizeSum(int[] nums, int k){
+    private int maximizeSum(int[] nums, int k) {
         int sum = 0;
         Arrays.sort(nums);
         for (int i = 0; i < k; i++) {
-            sum += nums[nums.length-1];
-            nums[nums.length-1] +=1;
+            sum += nums[nums.length - 1];
+            nums[nums.length - 1] += 1;
         }
         return sum;
     }

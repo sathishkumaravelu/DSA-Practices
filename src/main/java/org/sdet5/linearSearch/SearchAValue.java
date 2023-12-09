@@ -8,10 +8,10 @@ public class SearchAValue {
         find a target element in a given array.
      */
     @Test
-    public void testFindAValue(){
-        int[] nums = {3,4,5,6,7,45,2};
+    public void testFindAValue() {
+        int[] nums = {3, 4, 5, 6, 7, 45, 2};
         int target = 7;
-        boolean result = isPresent(nums,target);
+        boolean result = isPresent(nums, target);
         Assert.assertTrue(result);
     }
 
@@ -19,8 +19,8 @@ public class SearchAValue {
     //Space complexity - O(1)
     private boolean isPresent(int[] nums, int target) {
 
-        for (int num:nums) {
-            if(num==target) return true;
+        for (int num : nums) {
+            if (num == target) return true;
         }
         return false;
     }

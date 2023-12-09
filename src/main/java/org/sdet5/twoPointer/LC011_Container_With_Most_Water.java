@@ -14,18 +14,19 @@ public class LC011_Container_With_Most_Water {
     @Test
     public void positiveData() {
         int[] input = {1, 8, 6, 2, 5, 4, 8, 3, 7};
-        Assert.assertEquals(49,maxArea(input));
+        Assert.assertEquals(49, maxArea(input));
     }
+
     @Test
     public void edgeData() {
         int[] input = {5, 1, 3, 6, 7, 7, 6, 3, 1, 5};
-        Assert.assertEquals(input,maxArea(input));
+        Assert.assertEquals(input, maxArea(input));
     }
 
     @Test
     public void edgeData1() {
         int[] input = {1, 2, 1};
-        Assert.assertEquals(input,maxArea(input));
+        Assert.assertEquals(input, maxArea(input));
     }
 
     /*

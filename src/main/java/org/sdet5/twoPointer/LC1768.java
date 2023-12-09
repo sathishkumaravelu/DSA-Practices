@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class LC1768 {
 
     @Test
-    public void testMergeString(){
+    public void testMergeString() {
         String word1 = "abc";
         String word2 = "qpr";
         String s = mergeString(word1, word2);
@@ -22,24 +22,24 @@ public class LC1768 {
      */
 
     private String mergeString(String word1, String word2) {
-        int left = 0, right =0;
+        int left = 0, right = 0;
         String str = "";
         char[] word1Array = word1.toCharArray();
         char[] word2Array = word2.toCharArray();
 
-        while(left<word1.length() && right<word2.length()){
-            str= str+word1Array[left] + word2Array[right];
+        while (left < word1.length() && right < word2.length()) {
+            str = str + word1Array[left] + word2Array[right];
             left++;
             right++;
         }
 
         while (right < word1.length()) {
-            str= str+word1Array[right];
+            str = str + word1Array[right];
             right++;
         }
 
-        while (left<word2.length()){
-            str= str+word2Array[left];
+        while (left < word2.length()) {
+            str = str + word2Array[left];
             left++;
         }
         return str;

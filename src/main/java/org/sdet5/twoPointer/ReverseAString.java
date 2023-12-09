@@ -8,8 +8,8 @@ public class ReverseAString {
      */
 
     @Test
-    public void testReverseString(){
-        String word ="Hello Word!2";
+    public void testReverseString() {
+        String word = "Hello Word!2";
         reverseString(word);
     }
 
@@ -17,8 +17,8 @@ public class ReverseAString {
     //Space Complexity -O(N)
     private void reverseString(String word) {
         char[] charArray = word.toCharArray();
-        int left = 0, right = word.length()-1;
-        while(left<right){
+        int left = 0, right = word.length() - 1;
+        while (left < right) {
             char temp = charArray[left];
             charArray[left++] = charArray[right];
             charArray[right--] = temp;

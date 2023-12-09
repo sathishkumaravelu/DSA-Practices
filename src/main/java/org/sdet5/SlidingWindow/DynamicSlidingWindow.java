@@ -20,10 +20,10 @@ public class DynamicSlidingWindow {
 
 
     @Test
-    public void testDynamicSlidingWindow(){
-        int[] nums ={1,7,4,3,1,2,1,5,1};
+    public void testDynamicSlidingWindow() {
+        int[] nums = {1, 7, 4, 3, 1, 2, 1, 5, 1};
         int target = 7;
-        findTheSubArray(nums,target);
+        findTheSubArray(nums, target);
     }
 
     private void findTheSubArray(int[] nums, int target) {
@@ -47,8 +47,8 @@ public class DynamicSlidingWindow {
     }
 
     private void printValue(int[] nums, int left, int right) {
-        while (left<=right){
-            System.out.print(nums[left++]+" ");
+        while (left <= right) {
+            System.out.print(nums[left++] + " ");
         }
     }
 }

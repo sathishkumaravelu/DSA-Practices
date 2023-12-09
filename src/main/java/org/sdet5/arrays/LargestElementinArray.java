@@ -10,26 +10,27 @@ public class LargestElementinArray {
         output - int
      */
     @Test
-    public void positiveData(){
-        int[] input = {1,2,10,1,41,1};
-        Assert.assertEquals(findLargeValue(input),41);
-    }
-    @Test
-    public void edgeData(){
-        int[] input = {1,2,10,1,-41,-1};
-        Assert.assertEquals(findLargeValue(input),10);
+    public void positiveData() {
+        int[] input = {1, 2, 10, 1, 41, 1};
+        Assert.assertEquals(findLargeValue(input), 41);
     }
 
     @Test
-    public void edgeData1(){
+    public void edgeData() {
+        int[] input = {1, 2, 10, 1, -41, -1};
+        Assert.assertEquals(findLargeValue(input), 10);
+    }
+
+    @Test
+    public void edgeData1() {
         int[] input = {};
-        Assert.assertEquals(findLargeValue(input),Integer.MIN_VALUE);
+        Assert.assertEquals(findLargeValue(input), Integer.MIN_VALUE);
     }
 
     @Test
-    public void negativeData(){
-        int[] input = {-41,-1};
-        Assert.assertEquals(findLargeValue(input),-1);
+    public void negativeData() {
+        int[] input = {-41, -1};
+        Assert.assertEquals(findLargeValue(input), -1);
     }
 
     /*
@@ -40,9 +41,9 @@ public class LargestElementinArray {
         3. return result
      */
 
-    public int findLargeValue(int[] nums){
+    public int findLargeValue(int[] nums) {
         int result = Integer.MIN_VALUE;
-        for (int num:nums) if (num > result) result = num;
+        for (int num : nums) if (num > result) result = num;
         return result;
     }
 }

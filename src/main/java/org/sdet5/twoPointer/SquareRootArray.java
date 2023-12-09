@@ -9,7 +9,7 @@ public class SquareRootArray {
     @Test
     public void testSquareRootArray() {
         int[] nums = {-4, -1, 0, 3, 10};
-       // findSqrRootArray(nums);
+        // findSqrRootArray(nums);
         findSqrRootArrayTP(nums);
     }
 
@@ -33,9 +33,9 @@ public class SquareRootArray {
     //Time Complexity - O(N)
     //Space Complexity - O(N)
     private void findSqrRootArrayTP(int[] nums) {
-        int left = 0, right = nums.length-1,index = right;
+        int left = 0, right = nums.length - 1, index = right;
         int[] output = new int[nums.length];
-        for (int i = nums.length-1; i >= 0 ; i--) {
+        for (int i = nums.length - 1; i >= 0; i--) {
             int temp1 = Math.abs(nums[left]);
             int temp2 = Math.abs(nums[right]);
             if (temp1 < temp2) {

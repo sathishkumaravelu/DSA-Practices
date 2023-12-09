@@ -21,7 +21,7 @@ public class SearchValueInRange {
     //Space complexity - O(1)
     private boolean isPresent(int[] nums, int target, int[] range) {
         for (int i = range[0]; i <= range[1]; i++) {
-            if(nums[i]==target) return true;
+            if (nums[i] == target) return true;
         }
         return false;
     }

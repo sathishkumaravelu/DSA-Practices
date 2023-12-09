@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class PalindromeNumber {
 
     @Test
-    public void testPalindromeNumber(){
+    public void testPalindromeNumber() {
         int num = 101;
         System.out.println(isPalindrome(num));
     }

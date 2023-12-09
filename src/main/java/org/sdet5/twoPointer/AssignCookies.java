@@ -26,6 +26,7 @@ public class AssignCookies {
         int contentChildren = findContentChildren(g, s);
         System.out.println(contentChildren);
     }
+
     @Test
     public void edgeData() {
         int[] g = {1};
@@ -33,6 +34,7 @@ public class AssignCookies {
         int contentChildren = findContentChildren(g, s);
         System.out.println(contentChildren);
     }
+
     @Test
     public void negativeData() {
         int[] g = {3, 5, 7};

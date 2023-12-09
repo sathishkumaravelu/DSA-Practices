@@ -8,7 +8,7 @@ public class ReverseAWordsInString {
 
     @Test
     public void testReverseWordString() {
-      //  String words = "I am Happy engineer";
+        //  String words = "I am Happy engineer";
         String words = "babu, I am Happy engineer";
         reversStringInSpace(words);
     }
@@ -46,7 +46,7 @@ public class ReverseAWordsInString {
     private String reversStringInSpace(String s) {
         int left = 0;
         char[] charArray = s.toCharArray();
-        for (int right = 0; right <  charArray.length; right++) {
+        for (int right = 0; right < charArray.length; right++) {
             if (Character.isWhitespace(charArray[right])) {
                 reverseCharArray(charArray, left, right - 1);
                 left = right + 1;
