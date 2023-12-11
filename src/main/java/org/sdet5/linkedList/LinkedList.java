@@ -80,6 +80,45 @@ public class LinkedList {
         return head;
     }
 
+    @Test
+    public void testMiddleNode(){
+        Node head = addNode(10);
+        head.next = addNode(15);
+        head.next.next = addNode(16);
+        head.next.next.next = addNode(20);
+        head.next.next.next.next = addNode(25);
+     //   head.next.next.next.next.next = addNode(25);
+        System.out.println((middleNode(head)).data);
+    }
+    /*
+        Create a Linked List class
+        create a inner node class
+            with data, next and node
+            create a constructor
+        create a add node
+        create a print method
+
+        first add all the values to the linkedlist
+        pass the head to the findMiddleMethod
+
+        keep two pointer one slow and fast
+        iterate the node till the fast pointer reaches the null and fast.next ! = null
+        assign slow to current node
+               fast to current.next
+               current  = current.next
+
+        finally return slow pointer
+
+     */
+    private Node middleNode(Node head) {
+        Node slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            fast = slow.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
 
     public class Node {
         int data;
@@ -125,6 +164,8 @@ public class LinkedList {
         }
         return currentNode;
     }
-
-
 }
+
+
+
+
