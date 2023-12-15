@@ -1,0 +1,54 @@
+package org.sdet5.bfSolution;
+
+import org.testng.annotations.Test;
+
+public class RemoveDuplicate {
+
+    @Test
+    public void testRemoveDuplicate() {
+        int[] nums = {1, 1, 2, 2, 3, 4};
+       // int newLength = removeDuplicate(nums);
+//
+//        // Print the modified array
+//        for (int i = 0; i < newLength; i++) {
+//            System.out.print(nums[i] + " ");
+//        }
+
+
+        int count = removeDuplicates(nums);
+        for (int k = 0; k < count; k++) {
+            if (k < count - 1) {
+                System.out.print(nums[k]+" ");
+            }
+        }
+    }
+
+    private int removeDuplicate(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int uniqueIndex = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[uniqueIndex]) {
+                uniqueIndex++;
+                nums[uniqueIndex] = nums[i];
+            }
+        }
+        return uniqueIndex + 1;
+    }
+
+    public static int removeDuplicates(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i + 1;
+    }
+
+}

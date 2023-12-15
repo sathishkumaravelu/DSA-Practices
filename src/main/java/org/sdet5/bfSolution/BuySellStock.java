@@ -23,6 +23,7 @@ public class BuySellStock {
         int[] prices = {7, 1, 5, 3, 6, 4};
         findBuy(prices);
         findProfit(prices);
+        findBuyProfit(prices);
     }
 
     private void findBuy(int[] prices) {
@@ -38,6 +39,21 @@ public class BuySellStock {
             }
         }
 
+        System.out.println(maxProfit);
+    }
+
+
+
+    private void findBuyProfit(int[] prices){
+        int buy = prices[0];
+        int maxProfit = 0;
+        for (int i = 1; i < prices.length-1; i++) {
+            if(prices[i]<buy){
+                buy = prices[i];
+            } else if (prices[i]-buy > maxProfit) {
+                maxProfit = prices[i]-buy;
+            }
+        }
         System.out.println(maxProfit);
     }
 }
