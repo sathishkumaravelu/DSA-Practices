@@ -1,4 +1,4 @@
-package recussion;
+package org.sdet5.recussion;
 
 
 import org.testng.annotations.Test;
