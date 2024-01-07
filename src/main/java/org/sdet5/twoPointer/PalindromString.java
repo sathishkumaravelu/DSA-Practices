@@ -6,8 +6,8 @@ public class PalindromString {
 
     @Test
     public void testPalindromeString() {
-        String word = "level ";
-        System.out.println(isPalindrome(word));
+        String word = "A man, a plan, a canal: Panama";
+        System.out.println(isPalindrome1(word));
     }
 
     //Time Complexity - O(N)
@@ -22,6 +22,32 @@ public class PalindromString {
             }
             left++;
             right--;
+        }
+        return true;
+    }
+
+    private boolean isPalindrome1(String word){
+        int left = 0, right = word.length() - 1;
+        word = word.toLowerCase();
+
+        while (left < right) {
+            char leftChar = word.charAt(left);
+            char rightChar = word.charAt(right);
+
+            if (Character.isLetterOrDigit(leftChar) && Character.isLetterOrDigit(rightChar)) {
+                if (leftChar != rightChar) {
+                    return false;
+                }
+                left++;
+                right--;
+            } else {
+                if (!Character.isLetterOrDigit(leftChar)) {
+                    left++;
+                }
+                if (!Character.isLetterOrDigit(rightChar)) {
+                    right--;
+                }
+            }
         }
         return true;
     }

@@ -3,6 +3,8 @@ package org.sdet5.arrays;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LC001_TwoSum_Array {
 
@@ -16,7 +18,7 @@ public class LC001_TwoSum_Array {
     public void positiveData() {
         int[] input = {1, 1, 2, 0, 1};
         int target = 1;
-        Arrays.equals(findTwoSum(input, target), new int[]{3, 4});
+        Arrays.equals(findTwoSumHM(input, target), new int[]{3, 4});
     }
 
     @Test
@@ -53,5 +55,17 @@ public class LC001_TwoSum_Array {
             }
         }
         return result;
+    }
+
+    public int[] findTwoSumHM(int[] input,int target){
+        Map<Integer,Integer> hm = new HashMap<>();
+        for (int i = 0; i < input.length; i++) {
+            int diff = target-input[i];
+            if(hm.containsKey(diff)){
+                return new int[]{hm.get(diff),i};
+            }
+            hm.put(input[i], i);
+        }
+        return new int[]{0,0};
     }
 }

@@ -46,5 +46,6 @@ public class VendingMachine implements IVendingMachine {
             System.out.println("Invalid item selection. Please choose a valid item.");
         }
         return currentBalance;
+
     }
 }
